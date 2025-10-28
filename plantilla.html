@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+    <title>Información de la Concesión Consultada</title>
+</head>
+<body>
+
+<form name="pdf" action="test_py_html.py" method="get" style="page-break-inside: avoid !important;">
+    <div class="container text-white" style="height:45px; background-color:#691C32">
+        <div class="col-xs-4">
+            <b style="font-family:Garamond; font-size:120%">gob.mx</b>
+        </div>
+    </div>
+    <div class="container text-dark border-bottom border-dark" style="background-color:#E5E7E9; text-align:center;font-size:11px">
+        SecretarÍa de Economía<br>
+        Dirección General de Minas
+    </div>
+    <div class="container" >
+        <p style="text-align:center"><b style="text-align:center;font-size:11px">Informe para comprobar la ejecucion de las obras y trabajos de exploración o de
+            explotación</b></p>
+    </div>
+    <div class="container">
+        <div class="row justify-content-around" style="">
+            <div class="col-5 border border-dark" style="background-color:#D5DBDB;font-size:11px;text-align:center">Homoclave del formato</div>
+            <div class="col-5 border border-dark" style="background-color:#D5DBDB;font-size:11px;margin-left:115px">*Fecha de publicación del formato en el DOF</div>
+        </div>
+        <div class="row justify-content-around" style="text-align:center;">
+            <div class="col-5 border border-dark" style="font-size:11px">FF-SE-10-019</div>
+            <div class="col-5 border border-dark" style="margin-left:115px;font-size:11px"><?!= fecha_dof ?></div>
+        </div>
+        <div class="row justify-content-around" style="text-align:center;">
+            <div class="col-5 border border-dark" style="background-color:#D5DBDB;font-size:11px">Folio</div>
+            <div class="col-5 border border-dark" style="background-color:#D5DBDB;font-size:11px;margin-left:115px">Fecha de recepción</div>
+        </div>
+        <div class="row justify-content-around" style="text-align:center;">
+            <div class="col-5 border border-dark" style="font-size:11px" id="folio"></div>
+            <div class="col-5 border border-dark" style="margin-left:115px;font-size:11px">
+                <?!= fecha_recepcion ?>
+                <br>DD|MM|AAAA</div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB;font-size:11px">
+        <p>I. Datos generales del titular de la concesión minera o de quien lleve a cabo obras y trabajos de exploración o de explotación mediante contrato</p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="background-color:#D5DBDB; text-align:center;font-size:11px">Persona Física</div>
+            <div class="col-6 border border-dark" style="background-color:#D5DBDB; text-align:center;font-size:11px;">Persona Moral</div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="font-size:11px;" >CURP: <p style="text-align:center;margin-top:-15px;font-size:11px;">------------</p></div>
+            <div class="col-6 border border-dark" style="font-size:11px;">RFC: MAU531005M39</div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="font-size:11px;" >Nombre(s):<p style="text-align:center;margin-top:-15px;font-size:11px">------------</p></div>
+            <div class="col-6 border border-dark" style="font-size:11px;">Denominación o razón social: <br>COMPAÑIA MINERA AUTLAN, S.A.B DE C.V.</div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="font-size:11px;">RFC: <p style="text-align:center;margin-top:-15px;font-size:11px">------------</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="font-size:11px;" >Primer Apellido:<p style="text-align:center;margin-top:-15px;font-size:11px;">------------</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="font-size:11px;">Segundo Apellido:<p style="text-align:center;margin-top:-15px;font-size:11px;">------------</p></div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB;text-align:center;font-size:11px">
+        <b>Datos de Contacto</b>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Teléfono:<p style="text-align:left;margin-top:-17px;margin-left:200px"><?!= telefono_contacto ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Correo Electrónico:<p style="text-align:left;margin-top:-17px;margin-left:200px">
+                <?!= correo_contacto ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" ><input type="radio" name="" checked><p style="text-align:left;margin-top:-17px;margin-left:200px">Acepto recibir Notificaciones Electrónicas.</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" ><input type="radio" name="" checked><p style="text-align:left;margin-top:-17px;margin-left:200px">Leí el aviso de privacidad que se encuentra en éste enlace</p></div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB; text-align:center; font-size:11px">
+        <p>III. Domicilio para oir y recibir notificaciones del titular de la concesión minera o de quien lleve a cabo obras y trabajos de exploración o explotación mediante contrato</p>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark">Código Postal:<p style="text-align:center;margin-top:-15px">66260</p></div>
+            <div class="col-6 border border-dark">Calle:<p style="text-align:center;margin-top:-15px">AV.PEDRO RAMIREZ VAZQUEZ</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-3 border border-dark">Número exterior: <p style="text-align:right;margin-top:-15px"> 200</p></div>
+            <div class="col-3 border border-dark">Número interior(opcional): 10</div>
+            <div class="col-6 border border-dark" style="">Colonia:<p style="text-align:center;margin-top:-15px">DEL VALLE ORIENTE</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark">Localidad(opcional): <p style="text-align:right;margin-top:-15px">SAN PEDRO GARZA GARCIA</p></div>
+            <div class="col-6 border border-dark">Municipio o Demarcación<br>territorial:<p style="text-align:right;margin-top:-15px">SAN PEDRO GARZA GARCIA</p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" >Estado:<p style="text-align:center;margin-top:-15px">NUEVO LEÓN </p></div>
+            <div class="col-6 border border-dark">Entre calle <br> (opcional):<p style="text-align:right;margin-top:-25px">AV. LAZARO CARDENAS Y
+                AV. FUNDADORES
+            </p></div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container" style="font-size:11px">
+        <p style="text-align:center"><b style="text-align:center">*De conformidad con los artículos 4° de la Ley Federal de Procedimiento Administrativo y 46, fracción VII de la Ley General de Mejora
+            Regulatoria, los formatos para solicitar trámites y servicios deberán publicarse en el Diario Oficial de la Federación (DOF).</b></p>
+    </div>
+    <p style="page-break-after:always"></p>
+
+    <!--  -----------------------------------Seccion II  ------------------------------------------->
+    <div class="container text-white" style="height:45px; background-color:#691C32">
+        <div class="col-xs-4">
+            <b style="font-family:Garamond; font-size:120%">gob.mx</b>
+        </div>
+    </div>
+    <div class="container text-dark border-bottom border-dark" style="background-color:#E5E7E9; text-align:center;font-size:11px">
+        SecretarÍa de Economía<br>
+        Dirección General de Minas
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB;text-align:center;font-size:11px">
+        <p>IV. Datos generales del representante legal</p>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark justify-content-around" >RFC:<p style="text-align:left;margin-top:-17px;margin-left:300px"><?!= rfc_legal ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >CURP:<p style="text-align:left;margin-top:-17px;margin-left:300px">
+                <?!= curp_legal ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Nombre(s):<p style="text-align:left;margin-top:-17px;margin-left:300px"><?!= nombre_legal ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Primer Apellido:<p style="text-align:left;margin-top:-17px;margin-left:300px"><?!= apep_legal ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Segundo Apellido:<p style="text-align:left;margin-top:-17px;margin-left:300px"><?!= apem_legal ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Teléfono:<p style="text-align:left;margin-top:-17px;margin-left:300px"><?!= cel_legal ?></p></div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container border border-dark" style="background-color:#D5DBDB; text-align:center; font-size:11px">
+        <p>V. Datos Generales de la Concesión Minera</p>
+    </div>
+
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="">Número de título: <p style="text-align:center;margin-top:-5px" id="titulo"><?!= titulo ?></p></div>
+            <div class="col-6 border border-dark" style="">Nombre de lote:<p style="text-align:center;margin-top:-5px" id="lote"><?!= lote ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark">El título citado pertenece a un agrupamiento: <p style="text-align:center;margin-top:-20px"></p></div>
+            <div class="col-3 ">
+                <input type="radio" id="si" <?!= si_check ?>><label for="si">*Sí</label>
+            </div>
+            <div class="col-3 border-right border-dark">
+                <input type="radio" id="no" <?!= no_check ?>><label for="no">No</label>
+            </div>
+
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >*Número del título que encabeza el agrupamiento:<p style="text-align:center;margin-top:-5px" id="agrupamiento"><?!= agrupamiento ?></p></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >Año 1 del lote o agrupamiento(opcional):<p style="text-align:center;"><?!= anio_lote ?></p></div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB; text-align:center; font-size:11px">
+        <b>VI. Periódo a comprobar</b>
+    </div>
+
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-6 border border-dark" style="">Del: <p style="text-align:center;margin-top:-5px"><?!= inicio_comp ?><br>DD| MM |AAAA</p></div>
+            <div class="col-6 border border-dark" style="">Al: <p style="text-align:center;margin-top:-5px"><?!= fin_comp ?><br>DD| MM |AAAA</p></div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB; font-size:11px">
+        <p>VII. Importe desglosado de la inversión efectuada, del valor de facturación o liquidación de la producción obtenida
+            o indicación de la causa que motivó la suspensión temporal de las obras y trabajos.</p>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" style="text-align:center">Importe desglosado de la inversión efectuada: Monto en pesos (MXN)</div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" style="">
+                Obras mineras directas y todas aquellas que contribuyan al conocimiento geológico del lote o la cubicación de reservas o perforación
+            </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= obra_minera ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark">
+                Levantamientos topográficos, fotogramétricos, geodésicos,geológicos, geofísicos y geoquímicos
+            </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= levantamientos ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Análisis físico-químicos y pruebas de experimentación metalúrgica </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= analisis ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Desarrollo y rehabilitación de obras mineras</div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= desarrollo_minero ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento y mantenimiento de equipos para perforación y desarrollo de obras mineras </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= AMP_mineras ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento y mantenimiento de equipos de laboratorio físico-químico y de investigación metalúrgica </div>
+            <div class="col-4 border border-dark" style="text-align:right" ><?!= AMLF_meta ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento y mantenimiento de vehículos de trabajo y para la transportación del personal</div>
+            <div class="col-4 border border-dark" style="text-align:right" ><?!= AMTV_personal ?></div>
+        </div>
+    </div>
+    <p style="page-break-after:always"></p>
+    <br>
+    <div class="container text-white" style="height:45px; background-color:#691C32">
+        <div class="col-xs-4">
+            <b style="font-family:Garamond; font-size:120%">gob.mx</b>
+        </div>
+    </div>
+    <div class="container text-dark border-bottom border-dark" style="background-color:#E5E7E9; text-align:center;font-size:11px">
+        SecretarÍa de Economía<br>
+        Dirección General de Minas
+    </div>
+    <br>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" style="text-align:center">Importe desglosado de la inversión efectuada: Monto en pesos (MXN)</div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" style="">
+                Obras y equipos destinados a la seguridad en el trabajo y a la prevención de la contaminación o la recuperación del medio ambiente
+            </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= PC_ambiente ?></div>
+        </div>
+
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark">
+                Instalaciones de almacenes, oficinas, talleres, campamentos,casas-habitación y servicios a los trabajadores
+            </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= AOTC_trabajador ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento, construcción y mantenimiento de obras y equipos relacionados con vías de acceso, generación y conducción
+                de energía eléctrica, extracción, conducción y almacenamiento de agua e infraestructura en general</div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= vias_acceso ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento y mantenimiento de equipo para minado, acarreo y servicios generales de mina </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= serv_general ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Adquisición, arrendamiento, instalación y mantenimiento, de equipo para operaciones de beneficio y presas de jales </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= ope_presas ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Total </div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= total ?></div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >O en su caso, el importe del valor de facturación o liquidación de la producción obtenida</div>
+            <div class="col-4 border border-dark" style="text-align:right"><?!= produccion ?></div>
+        </div>
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB;text-align:center; font-size:11px">
+        <p>VIII. Causa que motivó la suspensión temporal de obras y trabajos.</p>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+
+            <div class="col-12 border-left border-right border-bottom border-dark" ><input type="radio" <?!= susp_tempo ?>> Imposibilidad técnica o incosteabilidad económica de llevar a cabo las obras y
+                trabajos de exploración o explotación
+            </div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border-left border-right border-bottom border-dark" style=""><input type="radio" <?!= susp_imposibilidad ?>>
+                Huelga o suspensión temporal de las relaciones de trabajo
+            </div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border-left border-right  border-bottom border-dark" ><input type="radio" <?!= susp_concurso ?>> Concurso mercantil, embargo o el fallecimiento del concesionario sin que exista
+                albacea por un plazo máximo de dos años siguientes al deceso </div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border-left border-right border-dark" ><input type="radio" <?!= susp_derrumbe ?>> Explosión, derrumbe, incendio, inundación, terremoto, disturbio o cualquier otra
+                causa de fuerza mayor
+            </div>
+        </div>
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" >
+                Especifique:
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p style="page-break-after:always"></p>
+    <!-- Seccion 4-->
+    <div class="container text-white" style="height:45px; background-color:#691C32">
+        <div class="col-xs-4">
+            <b style="font-family:Garamond; font-size:120%">gob.mx</b>
+        </div>
+    </div>
+    <div class="container text-dark border-bottom border-dark" style="background-color:#E5E7E9; text-align:center;font-size:11px">
+        SecretarÍa de Economía<br>
+        Dirección General de Minas
+    </div>
+    <br>
+    <div class="container border border-dark" style="background-color:#D5DBDB;text-align:center;font-size:11px">
+        <p>IX.  Excedente por aplicar de comprobaciones anteriores y su actualización; y monto por aplicar de comprobaciones subsecuentes,
+            (de conformidad con el artículo 62 del Reglamento de la Ley Minera).</p>
+    </div>
+    <div class="container" style="font-size:11px">
+        <div class="row justify-content-around" >
+            <div class="col-12 border border-dark" style="text-align:center">Importe desglosado de la inversión efectuada: Monto en pesos (MXN)</div>
+        </div>
+              <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" style="">
+                Excedente por aplicar de comprobaciones anteriores
+            </div>
+            <div class="col-4 border border-dark" style=""><?!= excedente ?></div>
+    </div>
+                <div class="row justify-content-around" >
+            <div class="col-8 border border-dark">
+                Entre valor índice de precios al consumidor del mes de octubre del año inmediato anterior
+            </div>
+            <div class="col-4 border border-dark"><?!= inpc_anterior ?></div>
+    </div>
+               <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Por valor del índice de precios al consumidor del mes de octubre del año que se comprueba </div>
+            <div class="col-4 border border-dark" ><?!= inpc_actual ?></div>
+    </div>
+               <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Actualización del excedente por aplicar</div>
+            <div class="col-4 border border-dark" ><?!= excedente_actual ?></div>
+    </div>
+
+                <div class="row justify-content-around" >
+            <div class="col-8 border border-dark" >Importe total de la inversión efectuada </div>
+            <div class="col-4 border border-dark" ><?!= inversion_efectuada ?></div>
+    </div>
+            <div  class="row justify-content-around">
+            <div class="col-8 border border-dark" >Total comprobado </div>
+            <div class="col-4 border border-dark" ><?!= total_comprobado ?></div>
+            </div>
+            <div  class="row justify-content-around">
+            <div class="col-8 border border-dark" >Monto mínimo por comprobar</div>
+            <div class="col-4 border border-dark" ><?!= monto_minimoc ?></div>
+            </div>
+            <div  class="row justify-content-around">
+            <div class="col-8 border border-dark" >Monto por aplicar en comprobaciones subsecuentes</div>
+            <div class="col-4 border border-dark" ><?!= result_montof ?></div>
+            </div>
+    </div>
+    <br>
+    <p style="text-align:center;font-size:11px">Manifiesto bajo protesta de decir verdad, que los datos asentados en el presente informe son ciertos y verificables en
+        <br>cualquier momento por las autoridades competentes.
+    </p>
+
+</form>
+
+</body>
+</html>
